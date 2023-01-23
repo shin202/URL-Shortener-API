@@ -8,5 +8,6 @@ const router = express_1.default.Router();
 router.get('/', UrlShortenerController_1.default.index);
 router.post('/', UrlShortenerController_1.default.store);
 router.get('/:shortUrl', UrlShortenerController_1.default.show);
+router.delete('/:shortUrl', UrlShortenerController_1.default.destroy);
 module.exports = router;
 //# sourceMappingURL=api.js.map

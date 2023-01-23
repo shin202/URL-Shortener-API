@@ -29,8 +29,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const mongoose_1 = __importStar(require("mongoose"));
 const shortid_1 = __importDefault(require("shortid"));
 const UrlShortenerSchema = new mongoose_1.Schema({
-    originalUrl: { type: String, required: true },
-    shortUrl: { type: String, required: true, default: shortid_1.default.generate },
+    original_url: { type: String, required: true },
+    short_url: { type: String, required: true, default: shortid_1.default.generate },
     visits: { type: Number, required: true, default: 0 },
     created_at: { type: Date, required: false, default: Date.now() },
 });

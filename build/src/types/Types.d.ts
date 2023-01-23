@@ -1,7 +1,7 @@
 import { Document } from "mongoose";
 export interface ShortUrl {
-    originalUrl: string;
-    shortUrl: string;
+    original_url: string;
+    short_url: string;
     visits: number;
     created_at: string | Date;
 }

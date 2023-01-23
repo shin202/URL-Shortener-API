@@ -1,22 +1,30 @@
-import { Request, Response, NextFunction } from "express";
+import { Request, Response } from "express";
 declare class UrlShortenerController {
     /**
-     * Display listing of URLs.
-     *
-     * @param req
-     * @param res
-     * @param next
-     */
-    index: (req: Request, res: Response, next: NextFunction) => Promise<Response<any, Record<string, any>>>;
+    * Display listing of urls.
+    *
+    * @param _req
+    * @param res
+    * @returns
+    */
+    index: (_req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
     /**
-     * Create a new short URL.
+     * Create a new short url.
      *
      * @param req
      * @param res
-     * @param next
+     * @returns
      */
-    store: (req: Request, res: Response, next: NextFunction) => Promise<Response<any, Record<string, any>>>;
-    show: (req: Request, res: Response, next: NextFunction) => Promise<Response<any, Record<string, any>> | undefined>;
+    store: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
+    /**
+     * Redirect to the original url.
+     *
+     * @param req
+     * @param res
+     * @returns
+     */
+    show: (req: Request, res: Response) => Promise<Response<any, Record<string, any>> | undefined>;
+    destroy: (req: Request, res: Response) => Promise<Response<any, Record<string, any>>>;
 }
 declare const _default: UrlShortenerController;
 export default _default;
